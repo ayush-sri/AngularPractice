@@ -1,0 +1,5 @@
+<input type="text" name="customer" id="customer">
+<button (click)="add()">Add</button>
+<ul *ngIf="customers.length>0">
+    <li *ngFor="let cust of customers">{{cust}}</li>
+</ul>

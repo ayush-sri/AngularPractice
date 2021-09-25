@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+
+    <form  #form="ngForm" (ngSubmit)="onSubmit(form)">
+        <input type="text" name="name"  ngModel id="name">
+        <input type="text" name="address" ngModel id="address">
+        <input type="text" name="department" ngModel id="department" >
+        <button type="submit">submit</button>
+    </form>
+
+    <div class="employees" *ngFor="let emp of empList">
+        {{emp | json}}
+    </div>
+
+    <app-customer-list></app-customer-list>
+</body>
+</html>
