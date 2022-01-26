@@ -1,0 +1,9 @@
+<h1>Add Your Note For Today</h1>
+<form>
+<textarea name="comment" form="usrform" [(ngModel)]="value" rows="15" cols="50" placeholder="Enter Note"></textarea>
+<br>
+<button type="submit" (click)="submit()">SUBMIT</button>
+</form>
+
+
+<app-child-notes  [notes]="notes" (notify)="parentMethod($event)"></app-child-notes>

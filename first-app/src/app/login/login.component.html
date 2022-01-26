@@ -1,0 +1,58 @@
+<div class="container pt-5">
+  <div class="row justify-content-sm-center pt-5">
+      <div class="col-sm-6 shadow round pb-3">
+         <div><h1 class="text-center pt-3 text-secondary">Form</h1></div> 
+          <div>
+              <form [formGroup]="dataForm" (ngSubmit)="postData();">
+                  <div class ="form-group">
+                  <label>Name:
+                      <input type="text" formControlName="Name" placeholder="Enter Your Name">
+                  </label><br><br></div>
+                  <div class ="form-group">
+                  <label>Age:
+                      <input type="text" type="number" formControlName="Age">
+                  </label><br><br></div>
+                  <div class="form-group">
+                  <label>Place:
+                      <select id="place" formControlName="Place">
+                          <option value="">Select</option>
+                          <option value="Rome">Rome</option>
+                          <option value="Delhi">Delhi</option>
+                          <option value="Itlay">Itlay</option>
+                          <option value="Spain">Spain</option>
+                          <option value="Las vegas">Las Vegas</option>
+                          <option value="Peru">Peru</option>
+                      </select>
+                  </label>
+                  </div>
+                   <div>
+                  <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+                  <input type="reset" value="Reset" class="btn btn-danger">
+                  </div>
+              </form>
+          </div> </div></div>
+          <br><br><br><br><br>
+          <table class="table table-striped">
+              <tr>
+                  <th class="table-success">SI. No</th>
+                  <th>Name</th>
+                  <th class="table-success">Age</th>
+                  <th>Place</th>
+                  <th class="table-success">Created Date</th>
+                  <th>Actions</th>
+              </tr>
+              <tr *ngFor="let item of objarray" >
+                      <td class="table-success">{{ item.s_no }}</td>
+                      <td>{{ item.name }}</td>
+                      <td class="table-success">{{ item.age }}</td>
+                      <td>{{ item.place }}</td>
+                      <td class="table-success">{{ item.date | date:"MM/dd/yy"}}</td>
+                      
+                      <td><button (click)="deleteData(emp)" type ="button" value= "Delete" class ="ui button-danger" icon="pi pi-trash" >Delete</button>
+                      
+              </tr>
+          </table>
+</div>  
+
+
+

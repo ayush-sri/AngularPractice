@@ -1,0 +1,6 @@
+<div *ngFor="let note of notes" [rp]="1">
+    {{note.id}}  {{note.time |date:'short'}}<br>{{note.data}}
+    <div id="delete" (click)="delete(note.id)"><button>DELETE</button>
+        
+    </div>
+    </div>

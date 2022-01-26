@@ -1,0 +1,51 @@
+<h1>Documentation</h1>
+<table class="table table-striped">
+    <tr>
+        <th scope="col"><button (click)="ur()" type ="button" value= "User">Users</button>
+            <tr  *ngFor="let it of tata">
+                <div class="one" *ngIf="data[0]" >
+                 <td class="table-success"></td>
+                 <td>{{it.user}}</td>
+                </div>
+             </tr>
+        </th>
+    
+        
+        
+    <th scope="col"><button (click)="ad()" type ="button" value= "Address">Address</button>
+    <tr  *ngFor="let ites of tata">
+        <div class="two" *ngIf="data[1]" >
+         <td class="table-danger"></td>
+         <td>{{ites.address}}</td>
+        </div>
+     </tr>
+    </th>
+
+    <th scope="col"><button (click)="ph()" type ="button" value= "Phonenumber">Phonenumber</button>
+     <tr  *ngFor="let item of tata">
+        <div class="three" *ngIf="data[2]" >
+         <td class="bg-success"></td>
+         <td>{{item.phonenumber}}</td>
+        </div>
+     </tr>
+    </th>
+
+    <th scope="col"><button (click)="pi()" type ="button" value= "Pincode">Pincode</button>
+     <tr  *ngFor="let ite of tata">
+        <div class="three" *ngIf="data[3]" >
+         <td class="bg-primary"></td>
+         <td>{{ite.pincode}}</td>
+        </div>
+     </tr>
+    </th>
+
+    <th scope="col"><button (click)="bl()" type ="button" value= "Bloodgroup">Bloodgroup</button>
+     <tr  *ngFor="let em of tata">
+        <div class="three" *ngIf="data[4]" >
+         <td  class="bg-danger"></td>
+         <td>{{em.bloodgroup}}</td>
+        </div>
+     </tr>
+    </th>
+</tr>
+</table>

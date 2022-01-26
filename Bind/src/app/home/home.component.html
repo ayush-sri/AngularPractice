@@ -1,0 +1,27 @@
+<div class="topnav">
+    <a (click)="ur()">Users</a>&nbsp;
+    <a (click)="ad()">Address</a>&nbsp;
+    <a (click)="ph()">Phone Numbers</a>&nbsp;
+    <a (click)="pi()">Pincodes</a>&nbsp;
+    <a (click)="bd()">Blood Groups</a>&nbsp;
+</div>
+
+<div class="one" *ngIf="arr[0]">
+    <p *ngFor="let item of user_data">{{item["user"]}}</p>
+</div>
+
+<div class="two"*ngIf="arr[1]" >
+    <p *ngFor="let item of user_data">{{item["address"]}}</p>
+</div>
+
+<div class="three" *ngIf="arr[2]">
+    <p *ngFor="let item of user_data">{{item["phonenumber"]}}</p>
+</div>
+
+<div class="four" *ngIf="arr[3]">
+    <p *ngFor="let item of user_data">{{item["pincode"]}}</p>
+</div>
+
+<div class="five" *ngIf="arr[4]">
+    <p *ngFor="let item of user_data">{{item["bloodgroup"]}}</p>
+</div>
